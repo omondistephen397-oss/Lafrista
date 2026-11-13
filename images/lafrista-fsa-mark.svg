@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">FSA - Fridah, Stephen and Andy</title>
+  <circle cx="32" cy="32" r="29" fill="#f6f3ed" stroke="#a64e37" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="24.5" fill="none" stroke="#dedbd3" stroke-width="0.75"/>
+  <path d="M18 18h28M18 46h28" fill="none" stroke="#a64e37" stroke-width="0.8"/>
+  <text x="32" y="36" fill="#23241f" font-family="Georgia,serif" font-size="15" font-weight="600" letter-spacing="1" text-anchor="middle">FSA</text>
+  <circle cx="32" cy="46" r="1.5" fill="#a64e37"/>
+</svg>
