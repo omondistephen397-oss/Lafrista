@@ -6,7 +6,7 @@ Lafrista is a responsive custom-clothing studio website built with plain HTML, C
 
 Open `index.html` in a browser to view the public website. The stock dashboard is a separate, local-only tool in the business workspace; its files are intentionally excluded from this public repository.
 
-The public enquiry form validates the visitor's details and opens a prefilled email draft to `fridahwanjawa600@gmail.com`; it does not send or store enquiries. The site also shows Lafrista's public phone, WhatsApp, Facebook name, location, and contact hours. Fashion product photography is loaded from Unsplash. The owner portraits are stored in `images/`.
+The public enquiry form validates the visitor's details and opens a prefilled email draft to `fridahwanjawa600@gmail.com`; it does not send or store enquiries. The site also shows Lafrista's public phone, WhatsApp, Facebook name, location, and contact hours. Fashion product photography is loaded from Unsplash. The owner portraits and studio showcase photos are stored in `images/`.
 
 ## Publish with GitHub Pages
 
