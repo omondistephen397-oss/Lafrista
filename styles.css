@@ -535,16 +535,41 @@ h2 {
   line-height: 1.8;
 }
 
-.contact-link {
-  display: inline-block;
-  margin-top: 0.7rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--color-ink);
-  font-size: 0.75rem;
+.contact-details {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.5rem 0 0;
 }
 
-.contact-link span {
-  margin-left: 0.4rem;
+.contact-details > div {
+  display: grid;
+  grid-template-columns: minmax(6.25rem, 0.6fr) minmax(0, 1.4fr);
+  gap: 0.5rem;
+}
+
+.contact-details dt {
+  color: var(--color-muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.contact-details dd {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.inquiry-form-title {
+  margin: 0;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  line-height: 1.2;
 }
 
 .inquiry-form {

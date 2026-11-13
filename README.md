@@ -6,13 +6,11 @@ Lafrista is a responsive custom-clothing studio website built with plain HTML, C
 
 Open `index.html` in a browser to view the public website. The stock dashboard is a separate, local-only tool in the business workspace; its files are intentionally excluded from this public repository.
 
-The public enquiry form validates the visitor's details and opens a prefilled email draft to `hello@lafrista.com`; it does not send or store enquiries. Fashion product photography is loaded from Unsplash. The owner portraits are stored in `images/`.
+The public enquiry form validates the visitor's details and opens a prefilled email draft to `fridahwanjawa600@gmail.com`; it does not send or store enquiries. The site also shows Lafrista's public phone, WhatsApp, Facebook name, location, and contact hours. Fashion product photography is loaded from Unsplash. The owner portraits are stored in `images/`.
 
 ## Publish with GitHub Pages
 
-The workflow in `.github/workflows/pages.yml` publishes the public site when changes reach the `main` branch. It copies only `index.html`, `styles.css`, and `images/` into the Pages artifact. The local stock dashboard is excluded from both the public repository and the published site.
-
-To turn on publishing, push the site changes to `main`, then in the GitHub repository open **Settings → Pages** and set the build and deployment source to **GitHub Actions**. The first successful workflow run publishes the site at `https://omondistephen397-oss.github.io/Lafrista/`. The owner photos in `images/` will be public on that site.
+The live site is available at <https://omondistephen397-oss.github.io/Lafrista/>. The workflow in `.github/workflows/pages.yml` publishes changes merged to `main` and copies only `index.html`, `styles.css`, and `images/` into the Pages artifact. The local stock dashboard is excluded from both the public repository and the published site.
 
 ## Design system
 
