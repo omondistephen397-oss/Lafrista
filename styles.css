@@ -446,6 +446,26 @@ h2 {
   line-height: 1.8;
 }
 
+.studio-gallery .lookbook-caption {
+  display: grid;
+  gap: 0.45rem;
+  font-style: normal;
+}
+
+.studio-gallery .lookbook-caption strong {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.studio-gallery .lookbook-caption span {
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-style: normal;
+  line-height: 1.7;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
