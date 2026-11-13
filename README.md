@@ -14,4 +14,4 @@ The live site is available at <https://omondistephen397-oss.github.io/Lafrista/>
 
 ## Design system
 
-The shared visual foundations live at the top of `styles.css` in `:root`: color, typography, spacing, and content-width tokens. Reusable patterns include the announcement bar, navigation, buttons, text links, service cards, section headings, form controls, and responsive page layouts. Use those tokens and patterns when adding pages so the studio website stays visually consistent.
+The shared visual foundations live at the top of `styles.css` in `:root`: color, typography, spacing, and content-width tokens. The header and footer pair the Lafrista wordmark with an FSA monogram for Fridah, Stephen, and Andy. Reusable patterns include the announcement bar, navigation, buttons, text links, service cards, section headings, form controls, and responsive page layouts. Use those tokens and patterns when adding pages so the studio website stays visually consistent.
