@@ -402,18 +402,21 @@ h2 {
   font-style: italic;
 }
 
-.founder-gallery {
+.founder-gallery,
+.studio-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
   gap: clamp(1rem, 2.2vw, 2rem);
 }
 
-.founder-gallery figure {
+.founder-gallery figure,
+.studio-gallery figure {
   margin: 0;
 }
 
-.founder-gallery img {
+.founder-gallery img,
+.studio-gallery img {
   display: block;
   width: 100%;
   height: clamp(17rem, 32vw, 30rem);
@@ -426,12 +429,41 @@ h2 {
   object-position: 28% center;
 }
 
-.founder-gallery figcaption {
+.founder-gallery figcaption,
+.studio-gallery figcaption {
   padding-top: 0.7rem;
   color: var(--color-muted);
   font-family: var(--font-display);
   font-size: 0.85rem;
   font-style: italic;
+}
+
+.studio-gallery-intro {
+  max-width: 28rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  line-height: 1.8;
+}
+
+.studio-gallery .lookbook-caption {
+  display: grid;
+  gap: 0.45rem;
+  font-style: normal;
+}
+
+.studio-gallery .lookbook-caption strong {
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.studio-gallery .lookbook-caption span {
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-style: normal;
+  line-height: 1.7;
 }
 
 .site-footer {
@@ -964,7 +996,8 @@ h2 {
     gap: 2.5rem;
   }
 
-  .founder-gallery img {
+  .founder-gallery img,
+  .studio-gallery img {
     height: clamp(15rem, 38vw, 23rem);
   }
 
@@ -1043,12 +1076,14 @@ h2 {
     gap: 2rem;
   }
 
-  .founder-gallery {
+  .founder-gallery,
+  .studio-gallery {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .founder-gallery img {
+  .founder-gallery img,
+  .studio-gallery img {
     height: 115vw;
     max-height: 34rem;
   }
