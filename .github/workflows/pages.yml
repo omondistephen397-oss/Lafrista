@@ -21,10 +21,27 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Prepare public website files
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_PUBLIC_KEY: ${{ secrets.SUPABASE_PUBLIC_KEY }}
         run: |
           mkdir -p _site/images
-          cp index.html styles.css _site/
+          cp index.html dashboard.html styles.css site.js dashboard.js supabase-client.js _site/
           cp images/* _site/images/
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          config = {
+              "url": os.environ.get("SUPABASE_URL", ""),
+              "anonKey": os.environ.get("SUPABASE_PUBLIC_KEY", ""),
+          }
+          Path("_site/supabase-config.js").write_text(
+              "window.LAFRISTA_SUPABASE = " + json.dumps(config) + ";\n",
+              encoding="utf-8",
+          )
+          PY
           touch _site/.nojekyll
 
       - name: Upload website
