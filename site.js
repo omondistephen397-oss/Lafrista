@@ -5,10 +5,9 @@ const formNote = document.querySelector("#form-note");
 const catalogSection = document.querySelector("#live-catalog");
 const catalogGrid = document.querySelector("#live-catalog-items");
 const catalogStatus = document.querySelector("#live-catalog-status");
+const inquiryRecipient = "omondistephen397@gmail.com";
 
-formNote.textContent = supabase
-  ? "Your enquiry is sent securely to the Lafrista studio."
-  : "Online submissions are not connected yet. Your enquiry will open as an email draft instead.";
+formNote.textContent = `Your email app will open a prefilled draft to ${inquiryRecipient}. Review it and press Send.`;
 
 function showInquiryMessage(message, isError) {
   formNote.textContent = message;
@@ -104,7 +103,7 @@ if (supabase) {
   catalogStatus.textContent = "The live catalog is temporarily unavailable. Please contact us about current products.";
 }
 
-inquiryForm.addEventListener("submit", async (event) => {
+inquiryForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!inquiryForm.reportValidity()) return;
 
@@ -117,36 +116,16 @@ inquiryForm.addEventListener("submit", async (event) => {
     details: String(details.get("details")).trim()
   };
 
-  if (!supabase) {
-    const subject = `Lafrista design enquiry: ${enquiry.interest}`;
-    const body = [
-      `Name: ${enquiry.name}`,
-      `Email: ${enquiry.email}`,
-      `Phone: ${enquiry.phone || "Not provided"}`,
-      `Interested in: ${enquiry.interest}`,
-      "",
-      "About my idea:",
-      enquiry.details
-    ].join("\n");
-    showInquiryMessage("The online enquiry form is not connected yet. Your email draft is ready; review it and press Send.", false);
-    window.location.href = `mailto:fridahwanjawa600@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    return;
-  }
-
-  const submitButton = inquiryForm.querySelector('button[type="submit"]');
-  submitButton.disabled = true;
-  showInquiryMessage("Sending your enquiry…", false);
-
-  try {
-    const { error } = await supabase.from("enquiries").insert(enquiry);
-    if (error) throw error;
-
-    inquiryForm.reset();
-    showInquiryMessage("Thank you — your enquiry has been sent to the Lafrista studio.", false);
-  } catch (error) {
-    console.error("Could not save the Lafrista enquiry.", error);
-    showInquiryMessage("We could not send your enquiry just now. Please try again or contact us by email or WhatsApp.", true);
-  } finally {
-    submitButton.disabled = false;
-  }
+  const subject = `Lafrista design enquiry: ${enquiry.interest}`;
+  const body = [
+    `Name: ${enquiry.name}`,
+    `Email: ${enquiry.email}`,
+    `Phone: ${enquiry.phone || "Not provided"}`,
+    `Interested in: ${enquiry.interest}`,
+    "",
+    "About my idea:",
+    enquiry.details
+  ].join("\n");
+  showInquiryMessage(`Your email app will open a draft to ${inquiryRecipient}. Review it and press Send.`, false);
+  window.location.href = `mailto:${inquiryRecipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });

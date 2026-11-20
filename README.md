@@ -1,6 +1,6 @@
 # Lafrista Fashion & Design
 
-Lafrista is a responsive clothing studio website hosted with GitHub Pages. Supabase provides private shared inventory, a realtime product catalog, and a customer enquiry inbox. The public storefront stays readable when Supabase has not been configured; its enquiry form then opens a prefilled email draft.
+Lafrista is a responsive clothing studio website hosted with GitHub Pages. Supabase provides private shared inventory and a realtime product catalog. The public enquiry form opens a prefilled email draft addressed to `omondistephen397@gmail.com`.
 
 ## Set up the live backend
 
@@ -21,7 +21,7 @@ Lafrista is a responsive clothing studio website hosted with GitHub Pages. Supab
    Never use a Supabase secret or service-role key in the website or GitHub Pages. The public key is safe to expose only because the schema enforces row-level security.
 6. Merge the changes to `main` or run the **Publish Lafrista website** workflow. It publishes the storefront and the sign-in-protected dashboard at <https://omondistephen397-oss.github.io/Lafrista/dashboard.html>.
 
-The public website is <https://omondistephen397-oss.github.io/Lafrista/>. Products added in the dashboard are public and appear on the storefront immediately. Inventory and customer enquiries are private to authorized studio admins. Public enquiries are stored in Supabase and appear in the dashboard in realtime; this setup does not send email notifications.
+The public website is <https://omondistephen397-oss.github.io/Lafrista/>. Products added in the dashboard are public and appear on the storefront immediately. Inventory and any enquiry records stored in Supabase are private to authorized studio admins. The public enquiry form opens a prefilled email draft to `omondistephen397@gmail.com`; visitors must review and send it from their email app. These email drafts are not automatically stored in the dashboard.
 
 ## Run locally
 
